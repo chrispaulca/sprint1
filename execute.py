@@ -2,6 +2,10 @@ import os
 import json
 import sys
 
+#NOTE 1 : MAKE THIS TAKE AN ARGUMENT FROM SYS
+#NOTE 2 : WRITE TO FILE NAMED : prefix.txt > where prefix should be the variable passed from NOTE1
+
+#NOTE 1
 prefix = 'anchor'
 def extract_keys(d):
     keys = []
@@ -48,9 +52,9 @@ try:
                 with open(file) as txt_file:
                     openned_file = txt_file.readlines()
                     outputs = outputs + extract_json(openned_file)
-                    print outputs
+                    # NOTE2
             except:
                 print file, ': error in JSON'
 except:
     print 'Sorry, this directoy does not exist.'
-#print '\n'.join(outputs)
+print '\n'.join(outputs)
