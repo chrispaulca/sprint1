@@ -42,19 +42,25 @@ def extract_json(lines):
     return outputs
 
 outputs = []
-try:
-    os.chdir('./srv/runme')
 
-    print('Directory changed.')
-    for file in os.listdir('.'):
-        if file.startswith(prefix):
-            try:
-                with open(file) as txt_file:
-                    openned_file = txt_file.readlines()
-                    outputs = outputs + extract_json(openned_file)
-                    # NOTE2
-            except:
-                print file, ': error in JSON'
-except:
-    print 'Sorry, this directoy does not exist.'
-print '\n'.join(outputs)
+def execute(prefix)
+    try:
+        os.chdir('./srv/runme')
+
+        print('Directory changed.')
+        for file in os.listdir('.'):
+            if file.startswith(prefix):
+                try:
+                    with open(file) as txt_file:
+                        openned_file = txt_file.readlines()
+                        outputs = outputs + extract_json(openned_file)
+                        # NOTE2
+                except:
+                    print file, ': error in JSON'
+    except:
+        print 'Sorry, this directoy does not exist.'
+
+    to_print = '\n'.join(outputs)
+
+    with open(prefix+'.txt',w) as f:
+        write(to_print)
