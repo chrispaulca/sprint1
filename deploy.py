@@ -14,7 +14,7 @@ def deploy(path_to_ssh_key_private_key, server_address, prefix):
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     print "connecting"
-    c.connect(hostname = server_address, username = "ubuntu", pkey = k ) # change back username 
+    c.connect(hostname = server_address, username = "testtest", pkey = k ) # change back username 
     print "connected"
 
     c.exec_command("rm -rf sprint1; git clone https://github.com/chrispaulca/sprint1.git")
