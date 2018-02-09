@@ -24,5 +24,5 @@ def deploy(path_to_ssh_key_private_key, server_address, prefix):
     c.exec_command("""(crontab -l ; echo "*/5 * * * * python '/home/testtest/sprint1/execute.py' '%s'")| crontab -"""%prefix) 
     c.close()
     
-deploy('/Users/siavashmortezavi/data/comp/deeplearningkey/smortezavi.pem','ec2-54-218-42-161.us-west-2.compute.amazonaws.com','anchor')
+#deploy('/Users/siavashmortezavi/data/comp/deeplearningkey/smortezavi.pem','ec2-54-218-42-161.us-west-2.compute.amazonaws.com','anchor')
 
