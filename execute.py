@@ -37,7 +37,7 @@ def extract_json(lines):
                 int(age)
             except:
                 continue
-            if name != "" and age != "" and no_dupe_keys(blob):
+            if name != "" and age != "" and no_dupe_keys(blob) and int(age) > 0:
                 outputs = outputs + [str(name) + ' ' + str(age)]
         except Exception as e:
             pass
