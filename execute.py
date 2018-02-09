@@ -36,7 +36,7 @@ def extract_json(lines):
             name, age = blob['name'], blob['prop']['age']
             try:
                 int(age)
-            except
+            except:
                 continue
             if name != "" and age != "" and no_dupe_keys(blob):
                 outputs = outputs + [str(name) + ' ' + str(age)]
