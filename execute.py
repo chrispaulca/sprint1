@@ -64,5 +64,5 @@ except:
 
 to_print = '\n'.join(outputs)
 
-with open('/srv/runme/'+prefix+'.txt',w) as f:
+with open('/srv/runme/'+prefix+'.txt','w') as f:
     write(to_print)
